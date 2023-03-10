@@ -1,0 +1,75 @@
+let products = [
+    {
+        name: "Iphone 13 Pro Max", // Tên sản phẩm
+        price: 3000000, // Giá mỗi sản phẩm
+        brand: "Apple", // Thương hiệu
+        count: 2, // Số lượng sản phẩm trong giỏ hàng
+    },
+    {
+        name: "Samsung Galaxy Z Fold3",
+        price: 41000000,
+        brand: "Samsung",
+        count: 1,
+    },
+    {
+        name: "IPhone 11",
+        price: 15500000,
+        brand: "Apple",
+        count: 1,
+    },
+    {
+        name: "OPPO Find X3 Pro",
+        price: 19500000,
+        brand: "OPPO",
+        count: 3,
+    },
+]
+// 1
+products.forEach(products =>{
+    console.log(`$(products.name),$(products.price),${products.brand}`)
+}
+);
+// 2
+let totalMoney=0;
+products.forEach(products =>{
+totalMoney=totalMoney+products.price+products.count;
+});
+console.log("tông tiền các sản phầm trong giỏ hàng $(totalMoney");
+// 3
+let findApple = products.filter(product => products.brand=="Apple");
+console.log('các sản phẩm thương hiệu Apple');
+findApple.forEach(product => console.log(product.name));
+// 4
+let findExpensive = products.filter(product => products.price >20000000);
+console.log('sản phẩm có giá dưới 2000000');
+findExpensive.forEach(product => console.log(product.name));
+// 5
+let proProducts= products.filter(product => products.name.toLowerCase().includes('pro'));
+console.log('các sản phẩm có tên "pro" trong tên');
+proProducts.forEach(product => console.log(product.name));
+// 6
+let newProduct = {
+    name: 'lavara',
+    price: 12000000,
+    brand: 'node',
+    count: 2,
+};
+products.push(newProduct);
+console.log('Danh sách sản phẩm sau khi thêm:');
+products.forEach(product => console.log(product.name));
+// 8
+products.sort((a, b) => a.price - b.price);
+console.log('Danh sách sản phẩm sau khi sắp xếp theo giá tăng dần:');
+products.forEach(product => console.log(`${product.name} - ${product.price}`));
+// 9
+products.sort((a, b) => b.count - a.count);
+console.log('Danh sách sản phẩm sau khi sắp xếp theo số lượng giảm dần:');
+products.forEach(product => console.log(`${product.name} - ${product.count}`));
+// 7
+products=products.filter(product => product.brand !="SamSung");
+console.log('Danh sách sp sau khi xóa')
+products.forEach(product => console.log(product.name));
+// 10
+let randomPro= products.slice(0,2);
+console.log('2 sản phẩm bất kỳ trong giỏ hàng:');
+randomPro.forEach(product => console.log(product.name));
