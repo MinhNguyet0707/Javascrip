@@ -1,0 +1,37 @@
+
+ function checkElementExist(arr,value){
+  return arr.includes(value);
+ }
+ let arr=[1,2,3,4,5];
+ console.log(checkElementExist(arr,5));
+ console.log(checkElementExist(arr,6));
+
+// bài 2
+function getElement(arr,value){
+    return arr.filter((num) => num>value);
+
+}
+let arr1=[1,2,3,4,5];
+console.log(getElement(arr,3));
+console.log(getElement(arr,5));
+
+// bài 3
+function randomHexCode(){
+    let a="123456789a"
+    let b="#";
+    for(let i=0;i<6;i++){
+        b+=a[Math.floor(Math.random()*10)];
+
+    }
+    return b;
+}
+console.log(randomHexCode);
+// bài 4
+function randomRgbCode() {
+    const red = Math.floor(Math.random() * 256);
+     const green = Math.floor(Math.random() * 256); 
+    const blue = Math.floor(Math.random() * 256);  
+    return `rgb(${red}, ${green}, ${blue})`;
+    }
+    console.log(randomRgbCode());
+
