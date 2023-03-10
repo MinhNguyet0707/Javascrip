@@ -1,0 +1,141 @@
+const grades = [
+    {name: 'John', grade: 8, sex: 'M'},
+    {name: 'Sarah', grade: 12, sex: 'F'},
+    {name: 'Bob', grade: 16, sex: 'M'},
+    {name: 'Johnny', grade: 2, sex: 'M'},
+    {name: 'Ethan', grade: 4, sex: 'M'},
+    {name: 'Paula', grade: 18, sex: 'F'},
+    {name: 'Donald', grade: 5, sex: 'M'},
+    {name: 'Jennifer', grade: 13, sex: 'F'},
+    {name: 'Courtney', grade: 15, sex: 'F'},
+    {name: 'Jane', grade: 9, sex: 'F'}
+   ]
+
+// Viết function tính thứ hạng trung bình của cả lớp
+function avergeRank(grades){
+   let avg=0;
+   for(let i=0;i<grades.length;i++){
+    avg+= grades[i].grade;
+   }
+   return avg/grades.length;
+}
+
+
+// Viết function tính thứ hạng trung bình của nam trong lớp
+function avgMail(grades){
+   let sum=0;
+   let count=0;
+   for(let i=0;i<grade.length;i++){
+      if(grades[i].sex==='M'){
+         sum+=grades[i].grade;
+         count++;
+      }
+   }
+   return sum/count;
+}
+
+
+// Viết function tính thứ hạng trung bình của Nữ trong lớp
+
+function avgFemail(grades){
+   let sum=0;
+   let count=0;
+   for(let i=0;i<grade.length;i++){
+      if(grades[i].sex==='F'){
+         sum+=grades[i].grade;
+         count++;
+      }
+   }
+   return sum/count;
+}
+
+// Viết function tìm học viên Nam có thứ hạng cao nhất trong lớp
+function highestMail(grades){
+   let highest=-1;
+   let highestMail;
+   for(let i=0;i<grades.lengthl;i++){
+      if(grades[i].sex==='M' && grades[i].grade>highest){
+         highest=grades[i].grade;
+         highestMail=grades[i];
+      }
+   }
+   return highestMail;
+}
+
+
+// Viết function tìm học viên Nữ có thứ hạng cao nhất trong lớp
+function highestfemail(grades){
+   let highest=-1;
+   let highestFeMail;
+   for(let i=0;i<grades.lengthl;i++){
+      if(grades[i].sex==='F' && grades[i].grade>highest){
+         highest=grades[i].grade;
+         highestFeMail=grades[i];
+      }
+   }
+   return highestFeMail;
+}
+
+
+// Viết function tìm học viên Nam có thứ hạng thấp nhất trong lớp
+function lowestMaleGrade(grades) {
+  let mailGrances=grades.filter(s => s.sex==='M');
+  let sortGrades=mailGrances.sort((a,b) => a.grade-b.grade);
+  return sortGrades[0].name;
+
+
+}
+let s1=lowestMaleGrade(grades);
+ console.log(s1);
+
+// Viết function tìm học viên Nữ có thứ hạng thấp nhất trong lớp
+function lowestFeMaleGrade(grades) {
+   let mailFeGrances=grades.filter(s => s.sex==='F');
+   let sortGrades=mailFeGrances.sort((a,b) => a.grade-b.grade);
+   return sortGrades[0].name;
+ }
+ let s=lowestFeMaleGrade(grades);
+ console.log(s);
+
+
+// Viết function lấy ra danh sách tất cả học viên Nữ trong lớp
+function findFemaleStudents(grades) {
+   return grades.filter(student => student.sex ==='F');
+   }
+   const femaleStudents = findFemaleStudents(grades);
+   console.log(femaleStudents);
+
+
+// Viết function sắp xếp tên học viên theo chiều tăng dần của bảng chữ cái
+function sortStudentsByName(grades) {
+   return grades.sort((a, b) => a.name.localeCompare(b.name));
+ }
+ 
+ const studentsSortedByName = sortStudentsByName(grades);
+ console.log(studentsSortedByName);
+
+
+
+// Viết function sắp xếp thứ hạng học viên theo chiều giảm dần
+function sortStudentsB(grades) {
+   return grades.sort((a, b) => b.grade - a.grade);
+   }
+   const a = sortStudentsB(grades);
+   console.log(a);
+
+
+
+
+// Viết function lấy ra học viên Nữ có tên bắt đầu bằng “J”
+function findFemaleStudens(grades) {
+   return grades.filter(student => student.sex ==='F' && student.name.startsWith('J'));
+   }
+
+   const b = findFemaleStudens(grades);
+   console.log(b);
+// Viết function lấy ra top 5 người có thứ hạng cao nhất trong lớp
+function getTop5Student(grades){
+  let sort= grades.sort((a,b) => b.grade-a.grade);
+  let c=sort.slice(0,5);
+  return c;
+}
