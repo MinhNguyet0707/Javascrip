@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <h1> Danh sách các sản phẩm</h1>
+        <ul class="tab">
+            <li class="tab-item active" onclick="changeProducr('new',this)">Phổ Biến</li>
+            <li class="tab-item" onclick="changeProducr('trend',this)">Mới nhất</li>
+            <li class="tab-item" onclick="changeProducr('best-sel',this)">Bán chạy</li>
+        </ul>
+        <div id="trend" class="animation">
+            <ul class="product-list">
+                <li><img src="tải xuống (1).jpg"     ></li>
+                <li><img src="tải xuống (2).jpg"     ></li>
+                <li><img src="tải xuống (3).jpg"     ></li>
+                <li><img src="tải xuống.jpg"     ></li>
+            </ul>
+        </div>
+        <div  id="new" class="animation">
+            <ul class="product-list">
+                <li><img src="tải xuống (1).jpg"     ></li>
+                <li><img src="tải xuống (2).jpg"     ></li>
+                <li><img src="tải xuống.jpg"     ></li>
+                <li><img src="tải xuống.png"     ></li>
+            </ul>
+        </div>
+        <div id="best-sel" class="animation">
+            <ul class="product-list">
+                <li><img src="tải xuống (1).jpg"     ></li>
+                <li><img src="tải xuống (2).jpg"     ></li>
+                <li><img src="tải xuống (3).jpg"     ></li>
+                <li><img src="tải xuống.jpg"     ></li>
+                <li><img src="tải xuống.png"     ></li>
+            </ul>
+        </div>
+
+        <scrip src="product.js"></scrip>
+
+    </div>
+    
+</body>
+</html>
