@@ -15,20 +15,55 @@ let quizes = [
         answers: [3, 4, 5, 6],
     },
 ];
-const btn = document.getElementById('btn');
+
 const quizContainer = document.querySelector('.quiz-container');
 
-btn.addEventListener('click', () => {
-    quizes.forEach((quiz) => {
-        const answerIndex = Math.floor(Math.random() * quiz.answers.length);
-        quizContainer.innerHTML += `
-      <div class="quiz">
-        <h3>${quiz.question}</h3>
-        <label>
-           <input type="radio" name="answer-${quiz.id}" value="${quiz.answers[answerIndex]}" checked>
-           ${quiz.answers[answerIndex]}
-         </label>
-    `;
-    });
-});
+quizes.forEach((quiz) => {
+    quizContainer.innerHTML += `
+      <h3 >${quiz.question}</h3>
+      <div class = "quiz-answer">
+      <input type="radio"  />
+    <label for="radio1">${quiz.answers[0]}</label><br>
+      <input type="radio"  />
+    <label for="radio1">${quiz.answers[1]}</label><br> 
+      <input type="radio"  />
+    <label for="radio1">${quiz.answers[2]}</label><br>    
+      <input type="radio"  />
+    <label for="radio1">${quiz.answers[3]}</label><br>
+    </div>
+      `;
+})
 
+let btn = document.getElementById('btn')
+let answers = document.getElementsByClassName('quiz-answer');
+btn.addEventListener('click',function(){
+    for(let i =0; i< answers.length; i++){
+        let random = Math.floor(Math.random()*4);
+        answers[i].querySelectorAll('input')[random].checked = true;
+    }  
+
+})
+
+
+
+
+
+
+
+
+// btn.addEventListener('click', () => {
+//     for(let i=0;i<4;i++){
+//  const answerIndex = Math.floor(Math.random() * quiz.answers.length) + 1;
+//         document.getElementById(answerIndex).setAttribute("checked", "")
+//     })
+//     }
+       
+
+
+//         <label>
+//             <input type="radio" name="answer-${quiz.id}" value="${quiz.answers[answerIndex]}" checked>
+//                 ${quiz.answers[answerIndex]}
+//         </label>
+
+//     });
+// });
