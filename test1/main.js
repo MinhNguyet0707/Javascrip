@@ -51,19 +51,3 @@ btn.addEventListener('click',function(){
 
 
 
-// btn.addEventListener('click', () => {
-//     for(let i=0;i<4;i++){
-//  const answerIndex = Math.floor(Math.random() * quiz.answers.length) + 1;
-//         document.getElementById(answerIndex).setAttribute("checked", "")
-//     })
-//     }
-       
-
-
-//         <label>
-//             <input type="radio" name="answer-${quiz.id}" value="${quiz.answers[answerIndex]}" checked>
-//                 ${quiz.answers[answerIndex]}
-//         </label>
-
-//     });
-// });
